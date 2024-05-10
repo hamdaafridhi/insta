@@ -1,8 +1,27 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-class insta extends StatelessWidget {
+import 'instagram/insta1.dart';
+
+class insta extends StatefulWidget {
   const insta({super.key});
 
+  @override
+  State<insta> createState() => _instaState();
+}
+
+class _instaState extends State<insta> {@override
+  void initState() {
+
+  Timer(Duration(
+    seconds: 3
+  ),() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => instahome(),));
+  }, );
+    // TODO: implement initState
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
